@@ -11,6 +11,10 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { ExperienciasComponent } from './components/experiencias/experiencias.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 
+// Importamos ng-circle-progress
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { SkillsComponent } from './components/skills/skills.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +24,36 @@ import { EducacionComponent } from './components/educacion/educacion.component';
     BannerComponent,
     AcercaDeComponent,
     ExperienciasComponent,
-    EducacionComponent
+    EducacionComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // Specify ng-circle-progress as an import
+    NgCircleProgressModule.forRoot({
+      "backgroundGradient": true,
+      "backgroundColor": "#ffffff",
+      "backgroundGradientStopColor": "#ffffff",
+      "backgroundOpacity": 0.3,
+      "backgroundStrokeWidth": 0,
+      "backgroundPadding": -10,
+      "radius": 60,
+      "toFixed": 0,
+      "maxPercent": 100,
+      "outerStrokeWidth": 8,
+      "outerStrokeColor": "#ffffff",
+      "outerStrokeLinecap": "butt", 
+      "innerStrokeColor": "#ffffff",
+      "innerStrokeWidth": 0.5,
+      "titleFontSize": "19",
+      "subtitleColor": "#444444",
+      "animationDuration": 800,
+      "showSubtitle": false,
+      "clockwise": false, 
+      "responsive": true})
   ],
-  providers: [],
+providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
