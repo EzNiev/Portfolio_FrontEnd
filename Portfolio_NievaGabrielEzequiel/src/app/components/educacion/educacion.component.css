@@ -21,9 +21,9 @@ section.educaciones{
 @media (min-width: 576px) {
     #logoeducacion {
         box-shadow: 3px 3px 3px grey;
-        
-
+        max-width: 15vw;
     }
+
     #cuerpoeducacion{
         padding-top: 0%;
     }

@@ -16,9 +16,9 @@
 @media (min-width: 576px) {
     #logoexp {
         box-shadow: 3px 3px 3px grey;
-        
-
+        max-width: 15vw;
     }
+
     #cuerpoexp{
         padding-top: 0%;
     }
