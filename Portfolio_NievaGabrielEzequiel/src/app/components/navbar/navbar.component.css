@@ -1,3 +1,13 @@
+ul{ list-style: none;}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Bodoni Condensed', 'Roboto', sans-serif;
+    margin: 0;
+    font-size: 1.25em;
+}
+
 .navbar{
     height: 10vh;
     padding-top: 0;
@@ -21,12 +31,11 @@
     border: var(--bs-list-group-border-width) solid rgb(0, 0, 0);
 }
 
-ul{ list-style: none;}
 
-a{
-    text-decoration: none;
-    color: black;
-    font-family: 'Bodoni Condensed', 'Roboto', sans-serif;
-    margin: 0;
-    font-size: 1.25em;
+@media (max-width: 325px){
+    .navbar-brand{
+        width: 0;
+    }
 }
+
+

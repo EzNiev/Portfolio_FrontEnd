@@ -38,3 +38,18 @@ div {
         padding-top: 40%;
     }
 }
+
+@media (max-width: 380px) {
+    #fotoperfil {
+        position: absolute;
+        width: 60%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 21%;
+        top: 35em;
+    }
+
+    #acercade{
+        padding-top: 40%;
+    }
+}
