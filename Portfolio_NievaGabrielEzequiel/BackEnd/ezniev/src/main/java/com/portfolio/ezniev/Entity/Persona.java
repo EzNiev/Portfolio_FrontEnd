@@ -27,6 +27,15 @@ public class Persona {
     @Size(min = 2, max = 50, message= "Dato fuera de rango (1 a 50 caracteres)")
     private String img;
     
+    @Size(min = 2, max = 50, message= "Dato fuera de rango (1 a 50 caracteres)")
+    private String profesion;
+    
+    @Size(min = 2, max = 1000, message= "Dato fuera de rango (1 a 1000 caracteres)")
+    private String descripcion;
+    
+    @Size(min = 2, max = 50, message= "Dato fuera de rango (1 a 50 caracteres)")
+    private String rutacv;
+    
     
     
     
