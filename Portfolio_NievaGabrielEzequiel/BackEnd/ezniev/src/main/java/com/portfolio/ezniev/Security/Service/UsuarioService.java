@@ -1,9 +1,6 @@
 package com.portfolio.ezniev.Security.Service;
 
-import com.portfolio.ezniev.Security.Entity.Rol;
 import com.portfolio.ezniev.Security.Entity.Usuario;
-import com.portfolio.ezniev.Security.Enums.RolNombre;
-import com.portfolio.ezniev.Security.Repository.iRolRepository;
 import com.portfolio.ezniev.Security.Repository.iUsuarioRepository;
 import java.util.Optional;
 import javax.transaction.Transactional;
