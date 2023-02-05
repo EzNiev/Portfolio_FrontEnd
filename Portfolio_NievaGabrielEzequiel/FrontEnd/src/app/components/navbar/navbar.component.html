@@ -20,11 +20,24 @@
                     <i class="fa-brands fa-github text-white"></i>
                 </a>
             </li>
-            <li class="list-group-item fa-1x"> 
-                <i class="fa-solid fa-user-lock text-white" (click)="login()">
-                    <button type="button" class="btn" style="color: white;"></button>
+
+            <li class="list-group-item fa-1x">
+                <i class="fa-solid fa-user-lock text-white login" (click)="login()" *ngIf="!isLogged">
+                    <button type="button" class="btn">
+                        Login
+                    </button>
                 </i>
             </li>
+
+            <li class="list-group-item fa-1x">
+                <i class="fa-solid fa-user-lock text-white logout" (click)="onLogOut()" *ngIf="isLogged">
+                    <button type="button" class="btn">
+                        Logout
+                    </button>
+                </i>
+            </li>
+
+
         </ul>
     </div>
 </nav>

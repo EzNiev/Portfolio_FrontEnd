@@ -58,7 +58,3 @@ i.fa-brands.fa-github.text-white:hover{
 }
 
 
-i.fa-solid.fa-user-lock.text-white:hover{
-    --bs-text-opacity: 1;
-    color: rgb(255, 0, 0)!important;
-}

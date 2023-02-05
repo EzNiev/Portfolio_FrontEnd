@@ -25,7 +25,8 @@ public class Rol {
         
     }
 
-    public Rol(RolNombre rolNombre) {
+    public Rol(int id, RolNombre rolNombre) {
+        this.id = id;
         this.rolNombre = rolNombre;
     }
     

@@ -1,16 +1,25 @@
 ul{ list-style: none;}
 
+button{
+    margin: 0;
+    color: white
+}
+
 a{
     text-decoration: none;
     color: black;
     font-family: 'Bodoni Condensed', 'Roboto', sans-serif;
     margin: 0;
-    font-size: 1.25em;
+    font-size: 1.5em;
 }
 
 .navbar{
     height: 10vh;
     padding-top: 0;
+}
+
+.navbar-brand{
+    padding: 0;
 }
 
 .bg-darkblue{
@@ -19,6 +28,7 @@ a{
 
 .list-group{
     --bs-list-group-bg: transparent;
+    --bs-list-group-border-color: var(--bs-border-color);
 }
 
 .list-group-item {
@@ -28,12 +38,21 @@ a{
     color: var(--bs-list-group-color);
     text-decoration: none;
     background-color: var(--bs-list-group-bg);
-    border: var(--bs-list-group-border-width) solid rgb(0, 0, 0);
+    border: var(--bs-list-group-border-width) solid rgba(0, 0, 0, 0);
 }
 
+i.fa-solid.fa-user-lock.text-white.login:hover{
+    --bs-text-opacity: 1;
+    color: rgb(21, 255, 0)!important;
+}
 
-@media (max-width: 325px){
-    .navbar-brand{
+i.fa-solid.fa-user-lock.text-white.logout:hover{
+    --bs-text-opacity: 1;
+    color: rgb(255, 0, 0)!important;
+}
+
+@media (max-width: 450px){
+    img{
         width: 0;
     }
 }

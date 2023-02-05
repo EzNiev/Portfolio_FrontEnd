@@ -18,6 +18,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from './service/interceptor-service';
 
 @NgModule({
   declarations: [
@@ -32,12 +34,13 @@ import { LoginComponent } from './components/login/login.component';
     FooterComponent,
     NavbarComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     // Specify ng-circle-progress as an import
     NgCircleProgressModule.forRoot({
       "backgroundGradient": true,
@@ -61,7 +64,9 @@ import { LoginComponent } from './components/login/login.component';
       "clockwise": false, 
       "responsive": true})
   ],
-providers: [],
+providers: [
+  interceptorProvider,
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
