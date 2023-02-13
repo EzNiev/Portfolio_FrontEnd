@@ -2,12 +2,14 @@ package com.portfolio.ezniev.Entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Experiencia {
+
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String tituloE;
     private String modalidadE;
@@ -84,7 +86,4 @@ public class Experiencia {
         this.descripcionE = descripcionE;
     }
 
-    
-    
-    
 }

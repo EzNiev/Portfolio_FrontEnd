@@ -1,8 +1,8 @@
 package com.portfolio.ezniev.Controller;
 
+import com.portfolio.ezniev.Dto.dtoExperiencia;
 import com.portfolio.ezniev.Entity.Experiencia;
 import com.portfolio.ezniev.Security.Controller.Mensaje;
-import com.portfolio.ezniev.Security.Dto.dtoExperiencia;
 import com.portfolio.ezniev.Service.SExperiencia;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
@@ -11,12 +11,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 
 @Controller
 @RequestMapping("experiencia")
@@ -32,12 +34,20 @@ public class CExperiencia {
         return new ResponseEntity(list, HttpStatus.OK);
     }
 
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<Experiencia> getById(@PathVariable("id") int id){
+        if(!sExperiencia.existById(id))
+            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
+        Experiencia experiencia = sExperiencia.getOne(id).get();
+        return new ResponseEntity(experiencia, HttpStatus.OK);
+    }   
+    
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoExperiencia dtoexp) {
         if (StringUtils.isBlank(dtoexp.getTituloE())) {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
-        if (sExperiencia.existByNombreE(dtoexp.getTituloE())) {
+        if (sExperiencia.existByTituloE(dtoexp.getTituloE())) {
             return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
         }
 
@@ -59,7 +69,7 @@ public class CExperiencia {
             return new ResponseEntity(new Mensaje("El ID no existe."), HttpStatus.BAD_REQUEST);
         }
         //Compara nombre de experiencia
-        if (sExperiencia.existByNombreE(dtoexp.getTituloE()) && sExperiencia.getByNombreE(dtoexp.getTituloE()).get().getId() != id) {
+        if (sExperiencia.existByTituloE(dtoexp.getTituloE()) && sExperiencia.getByTituloE(dtoexp.getTituloE()).get().getId() != id) {
             return new ResponseEntity(new Mensaje("Esa experiencia ya existe."), HttpStatus.BAD_REQUEST);
         }
         //No puede estar vacio
@@ -79,6 +89,15 @@ public class CExperiencia {
         return new ResponseEntity(new Mensaje("Experiencia actualizada/editada."), HttpStatus.OK);
     }
     
+    
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity
+    public ResponseEntity<?> delete(@PathVariable("id") int id){
+        //Validamos si existe el ID
+        if (!sExperiencia.existById(id)) 
+            return new ResponseEntity(new Mensaje("El ID no existe."), HttpStatus.BAD_REQUEST);
+            
+        sExperiencia.delete(id);
+         
+        return new ResponseEntity(new Mensaje("Experiencia eliminada."), HttpStatus.OK);
+    }
 }

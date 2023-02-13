@@ -1,4 +1,4 @@
-package com.portfolio.ezniev.Security.Dto;
+package com.portfolio.ezniev.Dto;
 
 import javax.validation.constraints.NotBlank;
 
