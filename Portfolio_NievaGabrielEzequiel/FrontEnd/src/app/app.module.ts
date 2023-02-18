@@ -21,6 +21,7 @@ import { LoginComponent } from './components/login/login.component';
 // Importamos ng-circle-progress
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { NewExperienciaComponent } from './components/experiencias/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencias/edit-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { NewExperienciaComponent } from './components/experiencias/new-experienc
     HomeComponent,
     LoginComponent,
     NewExperienciaComponent,
+    EditExperienciaComponent,
   ],
   imports: [
     BrowserModule,

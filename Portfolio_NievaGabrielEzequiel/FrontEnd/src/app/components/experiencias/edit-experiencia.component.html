@@ -1,39 +1,39 @@
-<div class="container">
+<div class="container" *ngIf="expLab">
     <div class="row">
         <div>
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="tituloE">Título de experiencia</label>
-                    <input type="text" class="form-control" id="tituloE" name="tituloE" [(ngModel)]="tituloE" required>
+                    <input type="text" class="form-control" id="tituloE" name="tituloE" [(ngModel)]="expLab.tituloE" required>
                 </div>
 
                 <div class="form-group">
                     <label for="modalidadE">Modalidad de experiencia</label>
-                    <input type="text" class="form-control" id="modalidadE" name="modalidadE" [(ngModel)]="modalidadE" required>
+                    <input type="text" class="form-control" id="modalidadE" name="modalidadE" [(ngModel)]="expLab.modalidadE" required>
                 </div>
 
                 <div class="form-group">
                     <label for="empresaE">Empresa de experiencia</label>
-                    <input type="text" class="form-control" id="empresaE" name="empresaE" [(ngModel)]="empresaE" required>
+                    <input type="text" class="form-control" id="empresaE" name="empresaE" [(ngModel)]="expLab.empresaE" required>
                 </div>
 
                 <div class="form-group">
                     <label for="periodoE">Periodo de experiencia</label>
-                    <input type="text" class="form-control" id="periodoE" name="periodoE" [(ngModel)]="periodoE" required>
+                    <input type="text" class="form-control" id="periodoE" name="periodoE" [(ngModel)]="expLab.periodoE" required>
                 </div>
 
                 <div class="form-group">
                     <label for="ubicacionE">Ubicación de experiencia</label>
-                    <input type="text" class="form-control" id="ubicacionE" name="ubicacionE" [(ngModel)]="ubicacionE" required>
+                    <input type="text" class="form-control" id="ubicacionE" name="ubicacionE" [(ngModel)]="expLab.ubicacionE" required>
                 </div>
 
                 <div class="form-group">
                     <label for="descripcionE">Descripción de experiencia</label>
-                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
+                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required>
                 </div>
 
                 <button class="btn btn-success">
-                    Agregar experiencia
+                    Actualizar experiencia
                 </button>
 
             </form>
