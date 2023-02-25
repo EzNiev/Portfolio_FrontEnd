@@ -78,7 +78,7 @@ public class CExperiencia {
 
         Experiencia experiencia = sExperiencia.getOne(id).get();
         experiencia.setTituloE(dtoexp.getTituloE());
-        experiencia.setDescripcionE(dtoexp.getModalidadE());
+        experiencia.setModalidadE(dtoexp.getModalidadE());
         experiencia.setEmpresaE(dtoexp.getEmpresaE());
         experiencia.setPeriodoE(dtoexp.getPeriodoE());
         experiencia.setUbicacionE(dtoexp.getUbicacionE());
