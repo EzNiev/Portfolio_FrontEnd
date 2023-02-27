@@ -65,6 +65,8 @@ public class Educacion{
     public void setDescripcionEd(String descripcionEd) {
         this.descripcionEd = descripcionEd;
     }
+
+   
     
     
 }
