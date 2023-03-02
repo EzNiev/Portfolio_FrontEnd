@@ -9,37 +9,37 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./educacion.component.css']
 })
 
-export class EducacionComponent implements OnInit{
+export class EducacionComponent implements OnInit {
   educacion: Educacion[] = [];
 
   constructor(private educacionS: EducacionService,
-    private tokenService: TokenService){  }
-  
-    isLogged = false;
+    private tokenService: TokenService) { }
 
-    ngOnInit(): void{
-      this.cargarEducacion();
-      if (this.tokenService.getToken()) {
-        this.isLogged = true;
-      } else {
-        this.isLogged = false;
-      }
-    }
+  isLogged = false;
 
-    cargarEducacion(): void {
-      this.educacionS.lista().subscribe(data => { this.educacion = data; })
+  ngOnInit(): void {
+    this.cargarEducacion();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
     }
+  }
 
-    delete(id?: number) {
-      if (id != undefined) {
-        this.educacionS.delete(id).subscribe(
-          data => {
-            this.cargarEducacion();
-          }, err => {
-            alert("No se pudo borrar la educacion.")
-          }
-        )
-      }
+  cargarEducacion(): void {
+    this.educacionS.lista().subscribe(data => { this.educacion = data; })
+  }
+
+  delete(id?: number) {
+    if (id != undefined) {
+      this.educacionS.delete(id).subscribe(
+        data => {
+          this.cargarEducacion();
+        }, err => {
+          alert("No se pudo borrar la educacion.")
+        }
+      )
     }
+  }
 
 }
