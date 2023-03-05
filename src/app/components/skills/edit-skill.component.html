@@ -1,29 +1,40 @@
-<div class="container" *ngIf="skill">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombreS">Nombre de skill</label>
-                    <input type="text" class="form-control" id="nombreS" name="nombreS" [(ngModel)]="skill.nombreS"
-                        required>
-                </div>
+<section id="formulario">
+    <div class="container">
+        <div class="row ">
+            <div>
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="nombreS">Nombre de skill</label>
+                        <input type="text" class="form-control" id="nombreS" name="nombreS" [(ngModel)]="skill.nombreS"
+                            required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="porcentajeS">Porcentaje de skill</label>
-                    <input type="text" class="form-control" id="porcentajeS" name="porcentajeS"
-                        [(ngModel)]="skill.porcentajeS" required>
-                </div>
+                    <div class="form-group">
+                        <label for="porcentajeS">Porcentaje de skill</label>
+                        <input type="number" class="form-control" id="porcentajeS" name="porcentajeS"
+                            [(ngModel)]="skill.porcentajeS" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="imgS">Imagen de skill</label>
-                    <input type="text" class="form-control" id="imgS" name="imgS" [(ngModel)]="skill.imgS" required>
-                </div>
+                    <div class="form-group">
+                        <label for="imgS">Imagen de skill</label>
+                        <input type="text" class="form-control" id="imgS" name="imgS" [(ngModel)]="skill.imgS" required>
+                    </div>
 
-                <button class="btn btn-success">
-                    Editar skill
-                </button>
+                    <div class="row">
+                        <div class="soyunbotoncito col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: center">
+                            <button class="btn btn-success">
+                                Actualizar skill
+                            </button>
+                        </div>
 
-            </form>
+                        <div class="soyunbotoncito col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: center">
+                            <button type="button" class="btn btn-light" routerLink="/">
+                                Cancelar edición
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
+</section>

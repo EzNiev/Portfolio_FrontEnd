@@ -1,47 +1,65 @@
-<div class="container" *ngIf="expLab">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="tituloE">Título de experiencia</label>
-                    <input type="text" class="form-control" id="tituloE" name="tituloE" [(ngModel)]="expLab.tituloE" required>
-                </div>
+<section id="formulario">
+    <div class="container" *ngIf="expLab">
+        <div class="row ">
+            <div>
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="tituloE">Título de experiencia</label>
+                        <input type="text" class="form-control" id="tituloE" name="tituloE" [(ngModel)]="expLab.tituloE"
+                            required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="modalidadE">Modalidad de experiencia</label>
-                    <input type="text" class="form-control" id="modalidadE" name="modalidadE" [(ngModel)]="expLab.modalidadE" required>
-                </div>
+                    <div class="form-group">
+                        <label for="modalidadE">Modalidad de experiencia</label>
+                        <input type="text" class="form-control" id="modalidadE" name="modalidadE"
+                            [(ngModel)]="expLab.modalidadE" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="empresaE">Empresa de experiencia</label>
-                    <input type="text" class="form-control" id="empresaE" name="empresaE" [(ngModel)]="expLab.empresaE" required>
-                </div>
+                    <div class="form-group">
+                        <label for="empresaE">Empresa de experiencia</label>
+                        <input type="text" class="form-control" id="empresaE" name="empresaE"
+                            [(ngModel)]="expLab.empresaE" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="periodoE">Periodo de experiencia</label>
-                    <input type="text" class="form-control" id="periodoE" name="periodoE" [(ngModel)]="expLab.periodoE" required>
-                </div>
+                    <div class="form-group">
+                        <label for="periodoE">Periodo de experiencia</label>
+                        <input type="text" class="form-control" id="periodoE" name="periodoE"
+                            [(ngModel)]="expLab.periodoE" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="ubicacionE">Ubicación de experiencia</label>
-                    <input type="text" class="form-control" id="ubicacionE" name="ubicacionE" [(ngModel)]="expLab.ubicacionE" required>
-                </div>
+                    <div class="form-group">
+                        <label for="ubicacionE">Ubicación de experiencia</label>
+                        <input type="text" class="form-control" id="ubicacionE" name="ubicacionE"
+                            [(ngModel)]="expLab.ubicacionE" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="descripcionE">Descripción de experiencia</label>
-                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required>
-                </div>
+                    <div class="form-group">
+                        <label for="descripcionE">Descripción de experiencia</label>
+                        <input type="text" class="form-control" id="descripcionE" name="descripcionE"
+                            [(ngModel)]="expLab.descripcionE" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="imgE">Imagen de experiencia</label>
-                    <input type="text" class="form-control" id="imgE" name="imgE" [(ngModel)]="expLab.imgE" required>
-                </div>
+                    <div class="form-group">
+                        <label for="imgE">Imagen de experiencia</label>
+                        <input type="text" class="form-control" id="imgE" name="imgE" [(ngModel)]="expLab.imgE"
+                            required>
+                    </div>
 
-                <button class="btn btn-success">
-                    Actualizar experiencia
-                </button>
+                    <div class="row">
+                        <div class="soyunbotoncito col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: center">
+                            <button class="btn btn-success">
+                                Actualizar experiencia
+                            </button>
+                        </div>
 
-            </form>
+                        <div class="soyunbotoncito col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: center">
+                            <button type="button" class="btn btn-dark" routerLink="/">
+                                Cancelar edición
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
+</section>

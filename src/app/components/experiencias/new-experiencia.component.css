@@ -1,0 +1,26 @@
+.form-group{
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+.soyunbotoncito{
+    padding-top: 1em;
+}
+
+#formulario{
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../../assets/img/FondoFormulario3.jpg);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    padding: 0;
+}
+
+label{
+    color: aliceblue;
+    font-weight: bold;
+}
+

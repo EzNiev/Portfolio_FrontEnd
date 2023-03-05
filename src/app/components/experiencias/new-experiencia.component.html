@@ -1,47 +1,65 @@
-<div class="container">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="tituloE">Título de experiencia</label>
-                    <input type="text" class="form-control" id="tituloE" name="tituloE" [(ngModel)]="tituloE" required>
-                </div>
+<section id="formulario">
+    <div class="container">
+        <div class="row ">
+            <div>
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="tituloE">Título de experiencia</label>
+                        <input type="text" class="form-control" id="tituloE" name="tituloE" [(ngModel)]="tituloE"
+                            required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="modalidadE">Modalidad de experiencia</label>
-                    <input type="text" class="form-control" id="modalidadE" name="modalidadE" [(ngModel)]="modalidadE" required>
-                </div>
+                    <div class="form-group">
+                        <label for="modalidadE">Modalidad de experiencia</label>
+                        <input type="text" class="form-control" id="modalidadE" name="modalidadE"
+                            [(ngModel)]="modalidadE" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="empresaE">Empresa de experiencia</label>
-                    <input type="text" class="form-control" id="empresaE" name="empresaE" [(ngModel)]="empresaE" required>
-                </div>
+                    <div class="form-group">
+                        <label for="empresaE">Empresa de experiencia</label>
+                        <input type="text" class="form-control" id="empresaE" name="empresaE"
+                            [(ngModel)]="empresaE" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="periodoE">Periodo de experiencia</label>
-                    <input type="text" class="form-control" id="periodoE" name="periodoE" [(ngModel)]="periodoE" required>
-                </div>
+                    <div class="form-group">
+                        <label for="periodoE">Periodo de experiencia</label>
+                        <input type="text" class="form-control" id="periodoE" name="periodoE"
+                            [(ngModel)]="periodoE" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="ubicacionE">Ubicación de experiencia</label>
-                    <input type="text" class="form-control" id="ubicacionE" name="ubicacionE" [(ngModel)]="ubicacionE" required>
-                </div>
+                    <div class="form-group">
+                        <label for="ubicacionE">Ubicación de experiencia</label>
+                        <input type="text" class="form-control" id="ubicacionE" name="ubicacionE"
+                            [(ngModel)]="ubicacionE" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="descripcionE">Descripción de experiencia</label>
-                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
-                </div>
+                    <div class="form-group">
+                        <label for="descripcionE">Descripción de experiencia</label>
+                        <input type="text" class="form-control" id="descripcionE" name="descripcionE"
+                            [(ngModel)]="descripcionE" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="imgE">URL de imagen de experiencia</label>
-                    <input type="text" class="form-control" id="imgE" name="imgE" [(ngModel)]="imgE" required>
-                </div>
+                    <div class="form-group">
+                        <label for="imgE">Url/Enlace de imagen de experiencia</label>
+                        <input type="text" class="form-control" id="imgE" name="imgE" [(ngModel)]="imgE"
+                            required>
+                    </div>
 
-                <button class="btn btn-success">
-                    Agregar experiencia
-                </button>
+                    <div class="row">
+                        <div class="soyunbotoncito col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: center">
+                            <button class="btn btn-success">
+                                Cargar experiencia
+                            </button>
+                        </div>
 
-            </form>
+                        <div class="soyunbotoncito col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: center">
+                            <button type="button" class="btn btn-light" routerLink="/">
+                                Cancelar carga
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
+</section>

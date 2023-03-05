@@ -1,37 +1,54 @@
-<div class="container" *ngIf="educacion">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="tituloE">Título de educacion</label>
-                    <input type="text" class="form-control" id="tituloEd" name="tituloEd" [(ngModel)]="educacion.tituloEd" required>
-                </div>
+<section id="formulario">
+    <div class="container">
+        <div class="row ">
+            <div>
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="tituloE">Título de educacion</label>
+                        <input type="text" class="form-control" id="tituloEd" name="tituloEd"
+                            [(ngModel)]="educacion.tituloEd" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="empresaE">Subtitulo de educacion</label>
-                    <input type="text" class="form-control" id="subtituloEd" name="subtituloEd" [(ngModel)]="educacion.subtituloEd" required>
-                </div>
+                    <div class="form-group">
+                        <label for="empresaE">Subtitulo de educacion</label>
+                        <input type="text" class="form-control" id="subtituloEd" name="subtituloEd"
+                            [(ngModel)]="educacion.subtituloEd" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="periodoE">Periodo de educacion</label>
-                    <input type="text" class="form-control" id="periodoEd" name="periodoEd" [(ngModel)]="educacion.periodoEd" required>
-                </div>
+                    <div class="form-group">
+                        <label for="periodoE">Periodo de educacion</label>
+                        <input type="text" class="form-control" id="periodoEd" name="periodoEd"
+                            [(ngModel)]="educacion.periodoEd" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="descripcionE">Descripción de educacion</label>
-                    <input type="text" class="form-control" id="descripcionEd" name="descripcionEd" [(ngModel)]="educacion.descripcionEd" required>
-                </div>
+                    <div class="form-group">
+                        <label for="descripcionE">Descripción de educacion</label>
+                        <input type="text" class="form-control" id="descripcionEd" name="descripcionEd"
+                            [(ngModel)]="educacion.descripcionEd" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="imgEd">Imagen de educacion</label>
-                    <input type="text" class="form-control" id="imgEd" name="imgEd" [(ngModel)]="educacion.imgEd" required>
-                </div>
+                    <div class="form-group">
+                        <label for="imgEd">Imagen de educacion</label>
+                        <input type="text" class="form-control" id="imgEd" name="imgEd" [(ngModel)]="educacion.imgEd"
+                            required>
+                    </div>
 
-                <button class="btn btn-success">
-                    Actualizar educacion
-                </button>
+                    <div class="row">
+                        <div class="soyunbotoncito col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: center">
+                            <button class="btn btn-success">
+                                Actualizar educacion
+                            </button>
+                        </div>
 
-            </form>
+                        <div class="soyunbotoncito col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: center">
+                            <button type="button" class="btn btn-light" routerLink="/">
+                                Cancelar edición
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
         </div>
     </div>
-</div>
+</section>
