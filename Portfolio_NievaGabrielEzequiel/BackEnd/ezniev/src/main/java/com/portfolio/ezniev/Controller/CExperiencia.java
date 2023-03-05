@@ -55,7 +55,8 @@ public class CExperiencia {
                 dtoexp.getEmpresaE(),
                 dtoexp.getPeriodoE(),
                 dtoexp.getUbicacionE(),
-                dtoexp.getDescripcionE());
+                dtoexp.getDescripcionE(),
+                dtoexp.getImgE());
         sExperiencia.save(experiencia);
 
         return new ResponseEntity(new Mensaje("Experiencia agregada correctamente."), HttpStatus.OK);
@@ -83,6 +84,7 @@ public class CExperiencia {
         experiencia.setPeriodoE(dtoexp.getPeriodoE());
         experiencia.setUbicacionE(dtoexp.getUbicacionE());
         experiencia.setDescripcionE(dtoexp.getDescripcionE());
+        experiencia.setImgE(dtoexp.getImgE());
         
         sExperiencia.save(experiencia);
         return new ResponseEntity(new Mensaje("Experiencia actualizada/editada."), HttpStatus.OK);

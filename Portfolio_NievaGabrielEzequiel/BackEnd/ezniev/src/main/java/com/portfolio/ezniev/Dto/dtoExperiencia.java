@@ -15,17 +15,20 @@ public class dtoExperiencia {
     private String ubicacionE;
     @NotBlank
     private String descripcionE;
+    @NotBlank
+    private String imgE;
 
     public dtoExperiencia() {
     }
 
-    public dtoExperiencia(String tituloE, String modalidadE, String empresaE, String periodoE, String ubicacionE, String descripcionE) {
+    public dtoExperiencia(String tituloE, String modalidadE, String empresaE, String periodoE, String ubicacionE, String descripcionE, String imgE) {
         this.tituloE = tituloE;
         this.modalidadE = modalidadE;
         this.empresaE = empresaE;
         this.periodoE = periodoE;
         this.ubicacionE = ubicacionE;
         this.descripcionE = descripcionE;
+        this.imgE = imgE;
     }
 
     public String getTituloE() {
@@ -76,6 +79,13 @@ public class dtoExperiencia {
         this.descripcionE = descripcionE;
     }
 
-    
+    public String getImgE() {
+        return imgE;
+    }
+
+    public void setImgE(String imgE) {
+        this.imgE = imgE;
+    }
+
     
 }

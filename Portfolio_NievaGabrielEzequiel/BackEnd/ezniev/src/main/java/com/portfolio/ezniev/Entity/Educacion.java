@@ -15,15 +15,17 @@ public class Educacion{
     private String subtituloEd;
     private String periodoEd;
     private String descripcionEd;
+    private String imgEd;
 
     public Educacion() {
     }
 
-    public Educacion(String tituloEd, String subtituloEd, String periodoEd, String descripcionEd) {
+    public Educacion(String tituloEd, String subtituloEd, String periodoEd, String descripcionEd, String imgEd) {
         this.tituloEd = tituloEd;
         this.subtituloEd = subtituloEd;
         this.periodoEd = periodoEd;
         this.descripcionEd = descripcionEd;
+        this.imgEd = imgEd;
     }
 
     public int getId() {
@@ -66,7 +68,14 @@ public class Educacion{
         this.descripcionEd = descripcionEd;
     }
 
-   
+    public String getImgEd() {
+        return imgEd;
+    }
+
+    public void setImgEd(String imgEd) {
+        this.imgEd = imgEd;
+    }
+    
     
     
 }

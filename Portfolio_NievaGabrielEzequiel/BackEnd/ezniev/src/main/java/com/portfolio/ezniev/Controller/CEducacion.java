@@ -52,7 +52,8 @@ public class CEducacion {
         Educacion educacion = new Educacion(dtoedu.getTituloEd(),
                 dtoedu.getSubtituloEd(),
                 dtoedu.getPeriodoEd(),
-                dtoedu.getDescripcionEd());
+                dtoedu.getDescripcionEd(),
+                dtoedu.getImgEd());
         sEducacion.save(educacion);
 
         return new ResponseEntity(new Mensaje("Educacion agregada correctamente."), HttpStatus.OK);
@@ -78,6 +79,7 @@ public class CEducacion {
         educacion.setSubtituloEd(dtoedu.getSubtituloEd());
         educacion.setPeriodoEd(dtoedu.getPeriodoEd());
         educacion.setDescripcionEd(dtoedu.getDescripcionEd());
+        educacion.setImgEd(dtoedu.getImgEd());
         
         sEducacion.save(educacion);
         return new ResponseEntity(new Mensaje("Experiencia actualizada/editada."), HttpStatus.OK);

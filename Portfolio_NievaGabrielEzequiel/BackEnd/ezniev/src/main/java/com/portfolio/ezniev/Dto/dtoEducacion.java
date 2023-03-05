@@ -11,15 +11,18 @@ public class dtoEducacion {
     private String periodoEd;
     @NotBlank
     private String descripcionEd;
+    @NotBlank
+    private String imgEd;
 
     public dtoEducacion() {
     }
 
-    public dtoEducacion(String tituloEd, String subtituloEd, String periodoEd, String descripcionEd) {
+    public dtoEducacion(String tituloEd, String subtituloEd, String periodoEd, String descripcionEd, String imgEd) {
         this.tituloEd = tituloEd;
         this.subtituloEd = subtituloEd;
         this.periodoEd = periodoEd;
         this.descripcionEd = descripcionEd;
+        this.imgEd = imgEd;
     }
 
     public String getTituloEd() {
@@ -52,6 +55,14 @@ public class dtoEducacion {
 
     public void setDescripcionEd(String descripcionEd) {
         this.descripcionEd = descripcionEd;
+    }
+
+    public String getImgEd() {
+        return imgEd;
+    }
+
+    public void setImgEd(String imgEd) {
+        this.imgEd = imgEd;
     }
     
     

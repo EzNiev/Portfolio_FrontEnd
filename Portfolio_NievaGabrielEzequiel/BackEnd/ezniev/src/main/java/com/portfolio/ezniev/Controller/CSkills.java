@@ -53,7 +53,8 @@ public class CSkills {
         }
 
         Skills skill = new Skills(dtoskill.getNombreS(),
-                dtoskill.getPorcentajeS());
+                dtoskill.getPorcentajeS(),
+                dtoskill.getImgS());
         sSkills.save(skill);
 
         return new ResponseEntity(new Mensaje("Skill agregada correctamente."), HttpStatus.OK);
@@ -79,6 +80,7 @@ public class CSkills {
         Skills skill = sSkills.getOne(id).get();
         skill.setNombreS(dtoskill.getNombreS());
         skill.setPorcentajeS(dtoskill.getPorcentajeS());
+        skill.setImgS(dtoskill.getImgS());
 
         sSkills.save(skill);
         return new ResponseEntity(new Mensaje("Skill actualizada/editada."), HttpStatus.OK);
