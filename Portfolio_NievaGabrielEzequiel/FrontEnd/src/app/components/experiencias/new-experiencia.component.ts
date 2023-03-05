@@ -15,6 +15,7 @@ export class NewExperienciaComponent implements OnInit{
   periodoE: string = '';
   ubicacionE: string = '';
   descripcionE: string = '';
+  imgE: string = '';
 
   constructor(private sExperiencia: SExperienciaService,
               private router: Router){
@@ -27,7 +28,7 @@ export class NewExperienciaComponent implements OnInit{
   }
 
   onCreate(): void{
-    const expe = new Experiencia(this.tituloE , this.modalidadE , this.empresaE , this.periodoE , this.ubicacionE , this.descripcionE)
+    const expe = new Experiencia(this.tituloE , this.modalidadE , this.empresaE , this.periodoE , this.ubicacionE , this.descripcionE, this.imgE)
     this.sExperiencia.save(expe).subscribe(data => {
       alert("Experiencia añadida");
       this.router.navigate(['']);

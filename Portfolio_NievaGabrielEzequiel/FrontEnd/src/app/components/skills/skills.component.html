@@ -11,8 +11,12 @@
         <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2 row" *ngFor="let Skill of skills">
             <br>
             <h2>{{Skill.nombreS}}</h2>
-            <circle-progress [percent]="(Skill.porcentajeS)" [showUnits]="false"
-                [imageSrc]="'../../../assets/img/html5-logo.png'" [showImage]="true" [imageHeight]="70"
+            <circle-progress 
+                [percent]="(Skill.porcentajeS)" 
+                [showUnits]="false"
+                [imageSrc]="(Skill.imgS)" 
+                [showImage]="true" 
+                [imageHeight]="70"
                 [imageWidth]="70">
             </circle-progress>
             <tr *ngIf="isLogged">
@@ -28,150 +32,5 @@
                 </td>
             </tr>
         </div>
-
-        <!-- <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>HTML</h2>
-            <circle-progress [percent]="85" [showUnits]="false" [imageSrc]="'../../../assets/img/html5-logo.png'"
-                [showImage]="true" [imageHeight]="70" [imageWidth]="70">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>CSS</h2>
-            <circle-progress [percent]="85" [showUnits]="false" [imageSrc]="'../../../assets/img/CSS.png'"
-                [showImage]="true" [imageHeight]="70" [imageWidth]="70">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>JavaScript</h2>
-            <circle-progress [percent]="80" [showUnits]="false" [imageSrc]="'../../../assets/img/js.png'"
-                [showImage]="true" [imageHeight]="70" [imageWidth]="70">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>TypeScript</h2>
-            <circle-progress [percent]="70" [showUnits]="false" [imageSrc]="'../../../assets/img/logo-typescript.png'"
-                [showImage]="true" [imageHeight]="60" [imageWidth]="60">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>VS Code</h2>
-            <circle-progress [percent]="90" [showUnits]="false" [imageSrc]="'../../../assets/img/logo-vsc.png'"
-                [showImage]="true" [imageHeight]="70" [imageWidth]="70">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>BootStrap</h2>
-            <circle-progress [percent]="90" [showUnits]="false" [imageSrc]="'../../../assets/img/bootstrap.png'"
-                [showImage]="true" [imageHeight]="90" [imageWidth]="140">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>Angular</h2>
-            <circle-progress [percent]="90" [showUnits]="false" [imageSrc]="'../../../assets/img/logo-angular.png'"
-                [showImage]="true" [imageHeight]="70" [imageWidth]="70">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>GitHub</h2>
-            <circle-progress [percent]="95" [showUnits]="false" [imageSrc]="'../../../assets/img/git.png'"
-                [showImage]="true" [imageHeight]="70" [imageWidth]="70">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>Python</h2>
-            <circle-progress [percent]="70" [showUnits]="false" [imageSrc]="'../../../assets/img/python.png'"
-                [showImage]="true" [imageHeight]="70" [imageWidth]="70">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>NetBeans</h2>
-            <circle-progress [percent]="75" [showUnits]="false" [imageSrc]="'../../../assets/img/netbeans.png'"
-                [showImage]="true" [imageHeight]="90" [imageWidth]="140">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>MySql</h2>
-            <circle-progress [percent]="80" [showUnits]="false" [imageSrc]="'../../../assets/img/mysql.png'"
-                [showImage]="true" [imageHeight]="70" [imageWidth]="70">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>PostMan</h2>
-            <circle-progress [percent]="90" [showUnits]="false" [imageSrc]="'../../../assets/img/postman.png'"
-                [showImage]="true" [imageHeight]="70" [imageWidth]="70">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>Comunicación</h2>
-            <circle-progress [percent]="70" [showUnits]="false" [imageSrc]="'../../../assets/img/comunicacionlogo.png'"
-                [showImage]="true" [imageHeight]="70" [imageWidth]="70">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>Team Work</h2>
-            <circle-progress [percent]="90" [showUnits]="false" [imageSrc]="'../../../assets/img/teamwork.png'"
-                [showImage]="true" [imageHeight]="70" [imageWidth]="70">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>Adaptación</h2>
-            <circle-progress [percent]="100" [showUnits]="false" [imageSrc]="'../../../assets/img/adaptacion.png'"
-                [showImage]="true" [imageHeight]="70" [imageWidth]="70">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>Time Managment</h2>
-            <circle-progress [percent]="70" [showUnits]="false" [imageSrc]="'../../../assets/img/timemanagment.png'"
-                [showImage]="true" [imageHeight]="70" [imageWidth]="70">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>Troubleshooting</h2>
-            <circle-progress [percent]="95" [showUnits]="false" [imageSrc]="'../../../assets/img/troubleshooting.png'"
-                [showImage]="true" [imageHeight]="70" [imageWidth]="70">
-            </circle-progress>
-        </div>
-
-        <div class="text-center col-xs-6 col-sm-6 col-md-4 col-lg-2">
-            <br>
-            <h2>Sociabilidad</h2>
-            <circle-progress [percent]="80" [showUnits]="false" [imageSrc]="'../../../assets/img/sociabilidad.png'"
-                [showImage]="true" [imageHeight]="80" [imageWidth]="80">
-            </circle-progress>
-        </div> -->
-
     </div>
 </div>
