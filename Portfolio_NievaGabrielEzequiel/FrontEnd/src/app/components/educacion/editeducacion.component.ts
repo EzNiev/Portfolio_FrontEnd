@@ -8,14 +8,13 @@ import { EducacionService } from 'src/app/service/educacion.service';
   templateUrl: './editeducacion.component.html',
   styleUrls: ['./editeducacion.component.css']
 })
-export class EditeducacionComponent implements OnInit{
+export class EditeducacionComponent implements OnInit {
   educacion: Educacion = null;
 
   constructor(
     private educacionS: EducacionService,
     private activatedRouter: ActivatedRoute,
-    private router: Router
-  ) { }
+    private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];

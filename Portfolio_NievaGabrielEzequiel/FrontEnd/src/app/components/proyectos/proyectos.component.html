@@ -1,15 +1,38 @@
 <div class="row">
+    <!-- Titulo sección -->
     <h1 class="text-center">Proyectos Realizados</h1>
-    
-    <div class="contenedor">
+    <!-- Boton para agregar un proyecto -->
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <button type="button" class="btn btn-dark" routerLink="/newproject" *ngIf="isLogged">
+            <i class="bi bi-plus-circle-fill"></i> Agregar proyecto
+        </button>
+    </div>
+
+    <!-- Proyectos cargados en la BD -->
+    <div class="contenedor" *ngFor="let Proyecto of proyectos">
         <div class="col-sm-12 col-md-12 col-lg-12 parte1 text-center">
-            <h2>Portfolio Personal en Angular</h2>
-            <p>Como parte del cursado de Argentina Programa uno de los trabajos es ir realizando nuestro portfolio a lo largo del curso, me tome la libertad de subir mi portfolio en la fase de desarrollo de Angular, porque me pareció que como portfolio es un buen punto de inflexión, ya que sin base de datos y solo tecnología front-end se puede realizar una página de presentación profesional. También me gusta mostrar la diferencia entre ese proyecto y el actual, para corroborar las mejoras y funciones agregadas al portfolio.</p>
+            <h2>{{Proyecto.tituloP}}</h2>
+            <p>{{Proyecto.descripcionP}}</p>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-12 parte2 text-center">
-            <a href="https://ezequielnievadev.web.app" target="_blank">
-                <img src="../../../assets/img/proyectoportfolioangular.png" alt="Portada proyecto Angular" class="img-fluid img-proyecto">
+            <a [href]="Proyecto.urlP" target="_blank">
+                <img [src]="Proyecto.imgP" alt="Portada proyecto" class="img-fluid img-proyecto">
             </a>
+        </div>
+        <!-- Botones de editar y borrar -->
+        <div style="padding: 1em;">
+            <tr *ngIf="isLogged" >
+                <td>
+                    <button class="btn btn-dark" routerLink="/editproject/{{Proyecto.id}}" >
+                        <i class="bi bi-pencil-square"></i> Editar
+                    </button>
+                </td>
+                <td style="padding-left: 1em">
+                    <button class="btn btn-danger" (click)="delete(Proyecto.id)">
+                        <i class="bi bi-trash"></i> Borrar
+                    </button>
+                </td>
+            </tr>
         </div>
     </div>
 </div>

@@ -8,7 +8,7 @@ import { EducacionService } from 'src/app/service/educacion.service';
   templateUrl: './neweducacion.component.html',
   styleUrls: ['./neweducacion.component.css']
 })
-export class NeweducacionComponent implements OnInit{
+export class NeweducacionComponent implements OnInit {
   tituloEd: string = '';
   subtituloEd: string = '';
   periodoEd: string = '';
@@ -16,21 +16,17 @@ export class NeweducacionComponent implements OnInit{
   imgEd: string = '';
 
   constructor(private educacionS: EducacionService,
-              private router: Router){
-
-  }
-
+    private router: Router) { }
 
   ngOnInit(): void {
-    
   }
 
-  onCreate(): void{
-    const expe = new Educacion(this.tituloEd , this.subtituloEd , this.periodoEd , this.descripcionEd, this.imgEd)
+  onCreate(): void {
+    const expe = new Educacion(this.tituloEd, this.subtituloEd, this.periodoEd, this.descripcionEd, this.imgEd)
     this.educacionS.save(expe).subscribe(data => {
       alert("Educacion añadida");
       this.router.navigate(['']);
-    }, err =>{
+    }, err => {
       alert("Falló");
       this.router.navigate([''])
     }
