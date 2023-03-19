@@ -7,7 +7,9 @@ import { Proyectos } from '../model/proyectos';
   providedIn: 'root'
 })
 export class ProyectosService {
-  proyUrl = 'http://localhost:8080/proyectos/';
+  //proyUrl = 'http://localhost:8080/proyectos/';
+  proyUrl = 'https://portfolio-back-tbb6.onrender.com/proyectos/';
+  
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Proyectos[]>{

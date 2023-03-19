@@ -7,7 +7,9 @@ import { Skills } from '../model/skills';
   providedIn: 'root'
 })
 export class SkillsService {
-  skillsURL = 'http://localhost:8080/skills/';
+  //skillsURL = 'http://localhost:8080/skills/';
+  skillsURL = 'https://portfolio-back-tbb6.onrender.com/skills/';
+
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Skills[]>{
